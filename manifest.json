@@ -11,7 +11,7 @@
         "default": "Ctrl+Shift+S",
         "mac": "Ctrl+Shift+S"
       },
-      "description": "Do the thing"
+      "description": "Do the thing..."
     }
   },
   "options_page": "options.html",
