@@ -1,22 +1,25 @@
 {
-  "name": "Skeleton extension",
+  "name": "Replace images with alt text",
   "version": "0.1",
-  "description": "A skeleton extension to get started",
+  "description": "Replace images with their alt text",
   "background": {
     "scripts": [ "background.js" ]
   },
   "commands": {
     "example_keyboard_command": {
       "suggested_key": {
-        "default": "Ctrl+Shift+S",
-        "mac": "Ctrl+Shift+S"
+        "default": "Ctrl+Shift+I",
+        "mac": "Ctrl+Shift+I"
       },
-      "description": "Do the thing..."
+      "description": "Replace all images with their alt text."
     }
   },
   "options_page": "options.html",
   "permissions": [
     "activeTab"
   ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "images/speech-16.png"
+  ]
 }

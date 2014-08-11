@@ -5,8 +5,9 @@
 chrome.commands.onCommand.addListener(function(command) {
   console.log('command: ', command);
   if (command == 'example_keyboard_command') {
-    chrome.tabs.executeScript({
-      code: 'document.body.style.backgroundColor="red"'
-    });
+    chrome.tabs.insertCSS({
+      file: 'hide-images.css',
+      allFrames: true
+    }, function() { console.log('successfully injected'); });
   }
 });
