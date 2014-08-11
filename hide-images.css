@@ -1,18 +1,33 @@
+/* Copyright 2014 The Chromium Authors. All rights reserved. */
+/* Use of this source code is governed by a BSD-style license that can be */
+/* found in the LICENSE file. */
+
+img[alt=''] {
+    display: none;
+}
+
 img {
     /* hide the image */
     height:0 !important;
     width:0 !important;
 
-    /* add some fake content to hand the ::before element off */
+    /* add some fake content to hang the ::before element off */
     content: "" !important;
 
     float: none !important;
     background-color: inherit !important;
 }
 
+img:not([alt]):before {
+    content: url('chrome-extension://obnhbckjidofdiphhfedalhekhfdbobm/images/speech-16.png') " " attr(_repaired) !important;
+
+    box-shadow: inset 0 -4px 0 #E67C73 !important;
+}
+
 img:before {
     content: url('chrome-extension://obnhbckjidofdiphhfedalhekhfdbobm/images/speech-16.png') " " attr(alt) !important;
-    box-shadow: inset 0 -4px 0 #ff0 !important;
-    min-width: 16px !important;
-    min-height: 16px !important;
+    min-width: fit-content !important;
+    min-height: fit-content !important;
+
+    box-shadow: inset 0 -4px 0 #8BC34A !important;
 }
