@@ -3,31 +3,35 @@
 /* found in the LICENSE file. */
 
 img[alt=''] {
-    display: none;
+    display: none !important;
 }
 
 img {
-    /* hide the image */
+    /* hide the image
     height:0 !important;
-    width:0 !important;
+    width:0 !important; */
 
     /* add some fake content to hang the ::before element off */
     content: "" !important;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')
 
+    /* display inline and remove any background color */
     float: none !important;
     background-color: inherit !important;
+    display: inline !important;
+
+    /* set height to contain the text content */
+    height: 100% !important;
 }
 
-img:not([alt]):before {
-    content: url('chrome-extension://obnhbckjidofdiphhfedalhekhfdbobm/images/speech-16.png') " " attr(_repaired) !important;
-
+img:not([alt]):not([aria-hidden=true]):not([role=presentation]):before {
+    content: url('chrome-extension://obnhbckjidofdiphhfedalhekhfdbobm/images/speech-missing-alt-16.png') " " attr(_repaired) !important;
     box-shadow: inset 0 -4px 0 #E67C73 !important;
 }
 
-img:before {
+img:not([aria-hidden=true]):not([role=presentation]):before {
     content: url('chrome-extension://obnhbckjidofdiphhfedalhekhfdbobm/images/speech-16.png') " " attr(alt) !important;
-    min-width: fit-content !important;
-    min-height: fit-content !important;
-
     box-shadow: inset 0 -4px 0 #8BC34A !important;
+    display: table;
+    clear: both;
 }
