@@ -15,7 +15,11 @@
     }
   },
   "browser_action": {
-    "default_title": "Replace all images with their alt text."
+    "default_title": "Replace all images with their alt text.",
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    }
   },
   "options_page": "options.html",
   "permissions": [
@@ -24,6 +28,7 @@
   "manifest_version": 2,
   "web_accessible_resources": [
     "images/speech-16.png",
-    "images/speech-missing-alt-16.png"
+    "images/speech-missing-alt-16.png",
+    "images/statusbarButtonGlyphs.png"
   ]
 }
