@@ -1,6 +1,8 @@
-a11y-extension-starter
+alt-viewer
 ======================
 
-Skeleton of a Chrome extension
+Minimal extension to replace images with their alt text.
 
-Some text...
+Doesn't do anything to background images.
+
+Clicking the page action toggles between image and alt text.
