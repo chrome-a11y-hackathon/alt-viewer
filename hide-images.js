@@ -62,14 +62,12 @@ function createInfobar() {
   if (infobarDismissed)
       return;
 
-  if (!document.body) {
-    console.log('no document.body');
+  if (!document.body)
     return;
-  }
-  if (document.querySelector('.show-alt-infobar')) {
-    console.log('already got infobar');
+
+  if (document.querySelector('.show-alt-infobar'))
     return;
-  }
+
   var showAltInfobar = document.createElement('div');
   showAltInfobar.className = 'show-alt-infobar';
 
