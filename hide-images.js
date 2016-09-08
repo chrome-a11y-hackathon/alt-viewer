@@ -14,6 +14,14 @@ function toggleEnabled(event) {
 }
 
 function processImage(image) {
+  var dataSrcValue = image.src;
+  var dataSrc = document.createAttribute('data-imagesrc');
+  dataSrc.value = dataSrcValue;
+  var brokenSrc = '';
+
+  image.src = brokenSrc;
+  image.setAttributeNode(dataSrc);
+
   image.style.setProperty('min-height', image.height + 'px');
   image.style.setProperty('min-width', image.width + 'px');
   var style = window.getComputedStyle(image, null);
